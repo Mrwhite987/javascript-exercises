@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const sumAll = function (first, last) {
+        if (typeof first !== "number" || typeof last !== "number") {
+          return "ERROR";
+        }
+        if (first <= 0 || last <= 0) {
+          return "ERROR";
+        }
+        if (last < first) {
+          let largerNum = first;
+          first = last;
+          last = largerNum;
+        }
+        let sum = 0;
+        for (let i = first; i <= last; i++) {
+          sum += i;
+        }
+        return sum;
+      };
+
+      console.log(sumAll(2, 4));
+    </script>
+  </body>
+</html>
